@@ -25,6 +25,7 @@ XGBoost (eXtreme Gradient Boosting) adalah pustaka pembelajaran mesin open sourc
 Preprocessing dilakukan untuk menghapus null value, melakukan label encoding dan minmax encoding, serta mengelompokkan isi fitur "Degree" menjadi SMA, Sarjana, Magister, dan Doktor dan ditambahkan pada fitur baru bernama "Education Level"
 ### EDA
 ![Distribusi Data](assets/distribusi_data.png)
+Dari grafik distribusi data di atas, dapat dilihat bahwa target data memiliki perbedaan yang tidak terlalu jauh sehingga data masih dapat dikatakan balance dan dapat dilanjutkan ke tahap selanjutnya.
 ### Modelling
 #### FNN
 ```bash
