@@ -1,4 +1,4 @@
-# Prediksi Depresi Menggunakan XGBoost dan Forward Neural Network ✈️ 🏢🏢
+# Prediksi Depresi Menggunakan XGBoost dan Forward Neural Network ✈️ 🏢🏢 💥
 Ardhika Yoga Pratama
 
 
@@ -36,6 +36,7 @@ model = Sequential([
 ```
 ![ROC Curves Accuracy](assets/fnn_roc_acc.png)
 ![ROC Curves Loss](assets/fnn_roc_loss.png)
+![FNN Conf Matrix](assets/fnn_conf_matrix.png)
 #### XGBoost
 ```bash
 df_xgb = xgb.XGBClassifier()
