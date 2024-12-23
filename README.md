@@ -1,5 +1,5 @@
 # Prediksi Depresi Menggunakan XGBoost dan Forward Neural Network
-![Alhamdulillah Sehat](https://id.pinterest.com/pin/635992778659393978/)
+![Alhamdulillah Sehat](assets/download.jpg)
 
 Ardhika Yoga Pratama
 
@@ -12,18 +12,18 @@ Proyek ini dikembangkan dengan tujuan untuk mendeteksi resiko depresi seseorang.
 ## Algoritma Classification
 ### Feedforward Neural Network
 Feedforward Neural Network (FNN) adalah jenis jaringan saraf tiruan dimana koneksi antara node tidak membentuk siklus. Karakteristik ini membedakannya dari recurrent neural networks (RNN). Jaringan ini terdiri dari input layer, satu atau lebih hidden layers, and an output layer. Informasi mengalir dalam satu arah-dari input ke output-maka dinamakan “feedforward”.
-![Arsitektur Model FNN]
+![Arsitektur Model FNN](assets/FNN_Arsitektur.jpg)
 
 ### XGBoost
 XGBoost (eXtreme Gradient Boosting) adalah pustaka pembelajaran mesin open source terdistribusi yang menggunakan decision trees dengan peningkatan gradien, sebuah algoritma peningkatan pembelajaran terawasi yang memanfaatkan penurunan gradien. Algoritma ini dikenal dengan kecepatan, efisiensi, dan kemampuannya untuk menskalakan dengan baik dengan dataset yang besar.
-![Arsitektur XGBoost]
+![Arsitektur XGBoost](assets/Arsitektur XGBoost.png)
 
 ## Preprocessing, EDA, and Modelling
 ### Preprocessing
 Preprocessing dilakukan untuk menghapus null value, melakukan label encoding dan minmax encoding, serta mengelompokkan isi fitur "Degree" menjadi SMA, Sarjana, Magister, dan Doktor dan ditambahkan pada fitur baru bernama "Education Level"
 ### EDA
 - Distribusi Data
-![Distribusi Data]
+![Distribusi Data](assets/distribusi_data.png)
 ### Modelling
 #### FNN
 ```bash
@@ -33,11 +33,12 @@ model = Sequential([
     Dense(1, activation='sigmoid')
 ])
 ```
-![ROC Curves]
+![ROC Curves Accuracy](assets/fnn_roc_acc.png)
+![ROC Curves Loss](assets/fnn_roc_loss.png)
 #### XGBoost
 ```bash
 df_xgb = xgb.XGBClassifier()
 df_xgb.fit(x_train, y_train)
 df_xgb_pred = df_xgb.predict(x_test)
 ```
-![ROC Curves]
+![Confussion Matrix](assets/xgb_matrix.png)
