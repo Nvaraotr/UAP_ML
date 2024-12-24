@@ -48,6 +48,10 @@ df_xgb_pred = df_xgb.predict(x_test)
 ```
 ![Confussion Matrix](assets/xgb_matrix.png)
 
+Berdasarkan confusion matrix dari FNN dan XGBoost, terlihat bahwa kedua model memiliki performa yang cukup baik, namun terdapat beberapa perbedaan signifikan dalam hasil prediksi mereka. Model XGBoost memiliki True Positive (TP) sebanyak 2.9×10³ dan False Negative (FN) sebanyak 3.9×10², menunjukkan kemampuan yang lebih baik dalam mendeteksi kasus positif dibandingkan FNN yang memiliki TP sebanyak 2.9×10³ tetapi FN lebih tinggi, yaitu 5.1×10². Namun, FNN memiliki True Negative (TN) sebanyak 1.8×10³, setara dengan XGBoost, yang menunjukkan kinerja yang sama dalam mendeteksi kasus negatif.
+
+XGBoost unggul dalam Recall (88.1%) dibandingkan FNN karena lebih sedikit gagal mendeteksi kasus positif (FN lebih rendah). Di sisi lain, FNN memiliki kesalahan lebih tinggi pada False Positive (FP) dibandingkan XGBoost, yang berarti lebih sering salah mendeteksi kasus negatif sebagai positif. Dengan demikian, XGBoost menunjukkan performa yang lebih seimbang antara deteksi positif dan negatif, serta memiliki keunggulan dalam mendeteksi kasus positif, menjadikannya model yang lebih cocok untuk masalah yang membutuhkan sensitivitas tinggi seperti deteksi risiko depresi.
+
 ## Streamlit 💻
 ### Web UI
 ![Website UI](assets/tampilan_Web.png)
